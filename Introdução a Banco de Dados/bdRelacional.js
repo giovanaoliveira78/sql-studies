@@ -27,4 +27,4 @@ Primery Key ou Chave Primária, identifica exclusivamente cada registro em uma t
 
 - É muito comum tabelas ter identificadores como id
 - Quando colocamos uma coluna como chave primária, o próprio banco garante que será um identificador único
-*/ 
+*/
