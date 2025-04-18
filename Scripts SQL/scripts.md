@@ -114,3 +114,13 @@ SELECT * FROM products WHERE price > 500 AND price < 1000 AND ID > 2 -- Listar o
 
 --OR, um ou outro critério deve ser atendido, pelo menos um.
 SELECT * FROM products WHERE price > 500 OR price < 1000
+
+
+-- Parenteses
+-- Usando AND e OR juntos
+SELECT * FROM products WHERE price > 45 AND price < 1000 OR category = 'image' -- Quando usamos o AND e o OR juntos, ele basicamente ignora os AND e retorna as condições dele
+
+SELECT * FROM products WHERE price > 45 AND price < 1000 AND category = 'audio' OR category = 'image'
+
+-- Usando o parenteses
+SELECT * FROM products WHERE (price > 45 AND price < 1000) AND (category = 'audio' OR category = 'image') -- Dessa forma a verificação é feita dentro do (), primeiro checa o AND e depois o OR, e não anula um o outro, ambas as varificações são feitas
