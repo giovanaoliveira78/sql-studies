@@ -78,12 +78,29 @@ DELETE FROM products WHERE id = 3
 SELECT * FROM products p WHERE name = 'Mouse'
 SELECT * FROM products p WHERE price = 1200
 
+
 -- Where com LIKE
-SELECT * FROM products WHERE name LIKE '%cam' 
-SELECT * FROM products WHERE name LIKE '%Web' 
-
 -- O símbolo de % no começo da palavra, retorna todas as palavras que terminam com cam
-
+SELECT * FROM products WHERE name LIKE '%cam' 
 -- O Sìmbolo de % no fim da palavra, retornam todas as palavras que comecem com Web
-
+SELECT * FROM products WHERE name LIKE '%Web' 
 -- E se colocar no começo e no fim vai encontrar em qualquer parte, no começo, meio ou fim
+SELECT * FROM products WHERE name LIKE '%eb%' 
+
+
+-- Filtrando valores
+
+--<> sinal de diferente
+SELECT * FROM products WHERE price <> 800 -- Seleciona valores diferentes de 800
+
+-- > sinal de maior
+SELECT * FROM products WHERE price <> 300 -- Seleciona valores maiores de 300
+
+-- < sinal de menor
+SELECT * FROM products WHERE price <> 500 -- Seleciona valores menores de 500
+
+-- <= sinal de menor igual
+SELECT * FROM products WHERE price <= 550 -- Seleciona valores menores ou iguais a 550
+
+-- >= Sinal de maior ou igual
+SELECT * FROM products WHERE price >= 500 -- Seleciona valores maiores ou iguais a 500
