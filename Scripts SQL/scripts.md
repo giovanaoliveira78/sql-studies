@@ -77,3 +77,13 @@ DELETE FROM products WHERE id = 3
 -- Clausula WHERE / o igual busca pelo valor exatamente igual
 SELECT * FROM products p WHERE name = 'Mouse'
 SELECT * FROM products p WHERE price = 1200
+
+-- Where com LIKE
+SELECT * FROM products WHERE name LIKE '%cam' 
+SELECT * FROM products WHERE name LIKE '%Web' 
+
+-- O símbolo de % no começo da palavra, retorna todas as palavras que terminam com cam
+
+-- O Sìmbolo de % no fim da palavra, retornam todas as palavras que comecem com Web
+
+-- E se colocar no começo e no fim vai encontrar em qualquer parte, no começo, meio ou fim
