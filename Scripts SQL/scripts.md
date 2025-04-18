@@ -104,3 +104,13 @@ SELECT * FROM products WHERE price <= 550 -- Seleciona valores menores ou iguais
 
 -- >= Sinal de maior ou igual
 SELECT * FROM products WHERE price >= 500 -- Seleciona valores maiores ou iguais a 500
+
+
+-- Operadores AND e OR
+--AND, os dois critérios devem ser atendidos (true)
+SELECT * FROM products WHERE price > 500 AND price < 1000 -- Listar os produtos onde o preço seja MAIOR QUE 500 e MENOR que 1000
+
+SELECT * FROM products WHERE price > 500 AND price < 1000 AND ID > 2 -- Listar os produtos onde o preço seja MAIOR QUE 500 e MENOR que 1000 e o id seja MAIOR que 2
+
+--OR, um ou outro critério deve ser atendido, pelo menos um.
+SELECT * FROM products WHERE price > 500 OR price < 1000
