@@ -146,3 +146,49 @@ SELECT * FROM products WHERE category = 'audio' ORDER BY price ASC
 
 -- ORDER BY com texto
 SELECT * FROM products ORDER BY name
+
+
+-- LIMIT
+SELECT * FROM products ORDER BY price DESC LIMIT 3 -- Irá definir o limite de resultados da busca, que nesse caso deverá retornar apenas 3
+
+
+-- COUNT 
+SELECT COUNT(*) FROM products -- Faz a contagem de quantos produtos cadastrados existem nessa tabela
+SELECT COUNT(name) FROM products -- Também da pra filtrar por colunas
+SELECT COUNT(price) FROM products
+SELECT COUNT(*) FROM products WHERE price >= 600 -- Também da pra usar com WHERE
+
+
+-- SUM (para fazer soma)
+-- É utilizado com colunas que tem valores numéricos
+SELECT SUM(price) FROM products -- Irá fazer uma soma de todos os preços dos produtos
+SELECT SUM(price) FROM products WHERE category = 'audio'
+
+
+-- AVG 
+SELECT AVG(price) FROM products -- Traz a média de preços
+SELECT AVG(price) FROM products WHERE category = 'audio' -- Traz a média de preços dos produtos com categoria de audio
+
+
+-- ALIASES
+SELECT COUNT(*) FROM products -- para renomear a resposta que vem na tabela
+SELECT COUNT(*) AS TOTAL FROM products -- Irá retornar TOTAL na tabela com os resultados das buscas dos produtos
+
+SELECT COUNT(*) TOTAL FROM products -- O AS é opcional, se ocultar ele também irá funcionar
+
+SELECT COUNT(*) 'TOTAL DE PRODUTOS' FROM products -- Para colocar mais de uma palavra, é só usar ''
+
+SELECT COUNT(*) [TOTAL DE PRODUTOS] FROM products -- Ou colchetes
+
+-- Também da pra renomear nome das colunas
+SELECT id AS code FROM products -- Renomeia apenas na exibição, não altera o nome da coluna de fato
+
+SELECT id AS ' pruduct code' FROM products -- Caso quisesse renomear para duas palavras
+
+
+-- GROUP BY 
+SELECT name, COUNT(*) AS TOTAL 
+FROM products 
+WHERE price > 600
+GROUP BY category 
+ORDER BY TOTAL DESC
