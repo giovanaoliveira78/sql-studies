@@ -133,3 +133,16 @@ SELECT * FROM products WHERE price BETWEEN 600 AND 1200
 -- IN
 SELECT * FROM products WHERE price IN (800,550) -- Aqui da pra passar os valores exatos direto
 SELECT * FROM products WHERE category IN ('image') -- Também funciona com texto
+
+
+-- ORDER BY
+SELECT * FROM products ORDER BY price -- Ordena os produtos por preço, por padrão ordena por crescente/ascendente (ASC) do menor para o maior
+
+-- DESC (descrescente) do maior para o menor 
+SELECT * FROM products ORDER BY price DESC 
+
+--  WHERE + ORDER BY
+SELECT * FROM products WHERE category = 'audio' ORDER BY price ASC
+
+-- ORDER BY com texto
+SELECT * FROM products ORDER BY name
