@@ -44,3 +44,54 @@ CREATE TABLE students_address (
 
   FOREIGN KEY (student_id) REFERENCES students(id)
 )
+
+INSERT INTO students_address (student_id, street, city) VALUES (
+  '1', 
+  'Joana da Silva', 
+  'Belo Horizonte'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '2', 
+  'Tenente João da Costa', 
+  'Salvador'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '3', 
+  'Maranhão Ribeiro', 
+  'Santo Amaro'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '4', 
+  'Gralha Azul', 
+  'Aracaju'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '5', 
+  'Amanda de Araujo Silva', 
+  'Maceió'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '6', 
+  'Neusa Aparecida Silva', 
+  'Guarujá'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '7', 
+  'João da Silva Duarte', 
+  'Campinas'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '8', 
+  'João Pedro Rios', 
+  'Guarulhos'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '9', 
+  'Amara de Jesus Saldanha', 
+  'Betim'
+  )
+  INSERT INTO students_address (student_id, street, city) VALUES (
+  '10', 
+  'Maria Tereza de Jesus', 
+  'Joinville'
+  )
