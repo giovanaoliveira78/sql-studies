@@ -32,3 +32,15 @@ INSERT INTO courses (name) VALUES ('Git');
 INSERT INTO courses (name) VALUES ('Github');
 INSERT INTO courses (name) VALUES ('Express.js');
 INSERT INTO courses (name) VALUES ('Banco de dados');
+
+
+-- 1:1 (um para um): Um aluno possui um endereço, e um endereço pertence a um aluno
+
+CREATE TABLE students_address (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  student_id INTEGER UNIQUE NOT NULL,
+  street TEXT NOT NULL,
+  city TEXT NOT NULL,
+
+  FOREIGN KEY (student_id) REFERENCES students(id)
+)
