@@ -95,3 +95,9 @@ INSERT INTO students_address (student_id, street, city) VALUES (
   'Maria Tereza de Jesus', 
   'Joinville'
   )
+
+
+  -- Inner Join
+SELECT a.id, a.student_id, s.name, a.street, a.city
+FROM students_address AS a
+INNER JOIN students AS s ON s.id = a.student_id
