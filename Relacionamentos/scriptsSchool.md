@@ -125,7 +125,6 @@ INSERT INTO course_modules
 VALUES 
 ('Fundamentos do HTML', 1),
 ('Formulários', 1),
-('CSS Functions', 2)
 
 SELECT m.id, m.name, m.course_id, c.name
 FROM course_modules AS m
@@ -140,3 +139,18 @@ CREATE TABLE students_courses (
   FOREIGN KEY (student_id) REFERENCES students(id),
   FOREIGN KEY (course_id) REFERENCES courses(id)
 )
+
+INSERT INTO students_courses 
+(student_id, course_id)
+VALUES
+(1, 2)
+
+INSERT INTO students_courses 
+(student_id, course_id)
+VALUES
+(4, 1)
+
+INSERT INTO students_courses 
+(student_id, course_id)
+VALUES
+(1, 1)
