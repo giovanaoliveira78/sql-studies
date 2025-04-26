@@ -101,3 +101,14 @@ INSERT INTO students_address (student_id, street, city) VALUES (
 SELECT a.id, a.student_id, s.name, a.street, a.city
 FROM students_address AS a
 INNER JOIN students AS s ON s.id = a.student_id
+
+
+-- 1:N - Um para muitos, UM curso tem MUITOS módulos
+
+CREATE TABLE course_modules (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  course_id INTEGER NOT NULL,
+
+  FOREIGN KEY (course_id) REFERENCES courses(id)
+)
